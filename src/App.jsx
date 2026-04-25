@@ -217,13 +217,13 @@ export default function App() {
 
         <div className="flex-1 flex flex-col items-center justify-center p-6 w-full max-w-xl mx-auto">
           <div className={`w-full bg-white rounded-[2.5rem] shadow-sm border border-slate-100 p-8 md:p-14 mb-8 transition-all duration-300 ${fadeIn ? 'opacity-100 scale-100' : 'opacity-0 scale-95'}`}>
-            <h2 className="text-2xl md:text-3xl font-light text-slate-900 leading-snug text-center mb-16 min-h-[120px] flex items-center justify-center">
+            <h2 className="text-2xl md:text-3xl font-light text-slate-900 leading-snug text-center mb-16 min-h-30 flex items-center justify-center">
               "{q.text}"
             </h2>
 
             <div className="flex flex-col gap-8">
               <div className="flex justify-between items-center w-full relative px-2">
-                <div className="absolute top-1/2 left-4 right-4 h-0.5 bg-slate-100 -z-0"></div>
+                <div className="absolute top-1/2 left-4 right-4 h-0.5 bg-slate-100 z-0"></div>
                 {[-2, -1, 0, 1, 2].map((val) => {
                   const isSelected = activeSelection === val;
                   const size = val === 0 ? "w-10 h-10" : Math.abs(val) === 1 ? "w-12 h-12" : "w-14 h-14";
@@ -272,8 +272,8 @@ export default function App() {
         </div>
 
         <div className={`flex-1 p-6 md:p-10 max-w-2xl mx-auto w-full transition-all duration-1000 ${fadeIn ? 'opacity-100' : 'opacity-0'}`}>
-          <div className="bg-white rounded-[2rem] shadow-sm border border-slate-100 p-10 text-center mb-6 relative overflow-hidden">
-            <div className="absolute top-0 left-0 w-full h-1.5 bg-gradient-to-r from-indigo-500 to-teal-400"></div>
+          <div className="bg-white rounded-4xl shadow-sm border border-slate-100 p-10 text-center mb-6 relative overflow-hidden">
+            <div className="absolute top-0 left-0 w-full h-1.5 bg-linear-to-r from-indigo-500 to-teal-400"></div>
             <p className="text-[10px] font-bold text-indigo-600 tracking-[0.3em] uppercase mb-4">Arquétipo HMI</p>
             <h1 className="text-4xl font-bold text-slate-900 mb-6">{profile.title}</h1>
             <div className="inline-block px-6 py-2 bg-slate-50 rounded-full font-mono text-xl tracking-[0.4em] mb-8 border border-slate-100">{result}</div>
